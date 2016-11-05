@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./stylesheets/public.css">
+    <link rel="stylesheet" href="./stylesheets/add_goods.css">
+    <script src="./javascripts/jquery-3.0.0.js"></script>
+    <script src="./javascripts/add_goods.js"></script>
+</head>
+<body>
+<div class="title">pos后台管理系统</div>
+<div class="title_bottom"></div>
+<div class="menu">
+    <button class="menu_button">商品管理</button>
+    <button class="menu_button">折扣活动</button>
+</div>
+<div class="main">
+    <form method="post">
+        <button id="save_goods" class="sub_menu_button" onclick="" disabled="disabled">保存商品</button>
+        <button id="add_property" class="sub_menu_button" disabled="disabled">添加属性</button>
+        <button id="del_property" class="sub_menu_button" disabled="disabled">删除属性</button>
+        <input type="button" id="cancal" class="sub_menu_button" value="取消" />
+        <div class="column">
+            商品名称:<input id="goods_name" name="goods_name" type="text" class="goods_input" onblur="unlock_button()" />
+            商品数量:<div class="border">
+                <input type="button" id="dec_goods_num" class="add_and_dec_button" disabled="disabled" value="-" />
+                <input name="goods_number" class="number_input" id='number' onblur="extract_number()" type="text" value="0" />
+                <input type="button" value="+" id="add_goods_num" class="add_and_dec_button" />
+            </div>
+        </div>
+        <div class="column">
+            单价 (元):<input id="goods_price" name="goods_price" type="text" class="goods_input goods_price_input" onblur="unlock_button()"  />
+            单位:<input id="goods_unit" name="goods_unit" type="text" class="goods_input" onblur="unlock_button()" />
+        </div>
+    </form>
+</div>
+</body>
+</html>

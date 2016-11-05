@@ -1,0 +1,46 @@
+.main{
+    float:right;
+    width:1000px;
+    margin-top: 40px;
+}
+.sub_menu_button{
+    width:100px;
+    height: 30px;
+    border-radius: 5px;
+    margin-right: 50px;
+    background-color: rgba(204, 204, 204, 0.29);
+}
+.column{
+    margin-top: 30px;
+}
+.goods_input{
+    margin-left: 20px;
+    height: 20px;
+    margin-right: 100px;
+    width:173px;
+}
+.border{
+    border:solid 1px #000000;
+    float:right;
+    margin-right: 370px;
+}
+.add_and_dec_button{
+    margin: 0;
+    padding: 0;
+    background-color: #FFFFFF;
+    border: 0;
+    width: 50px;
+    height: 20px;
+}
+.number_input{
+    height: 20px;
+    border-style:none solid;
+    border-width: 1px;
+    width: 60px;
+    padding: 0;
+    text-align:center;
+}
+.goods_price_input{
+    margin-left: 22px;
+    margin-right: 124px;
+}

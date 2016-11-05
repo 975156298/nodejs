@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="./stylesheets/public.css">
+  <link rel="stylesheet" href="./stylesheets/index.css">
+  <link rel="stylesheet" href="../stylesheets/dialog_box.css">
+  <script src="./javascripts/jquery-3.0.0.js"></script>
+  <script src="../javascripts/index.js"></script>
+  <script id="div_template" type="text/html">
+    <div class="dialog_box_main" id="dialog_box">
+      <p>确定要删除商品"name"吗?</p>
+      <button id="cancel_name" class="button">取消</button>
+      <button id="confirm_name" class="button">确定</button>
+    </div>
+  </script>
+</head>
+<body>
+<div class="title">pos后台管理系统</div>
+<div class="title_bottom"></div>
+<div class="menu">
+  <button class="menu_button">商品管理</button>
+  <button class="menu_button">折扣活动</button>
+</div>
+<div class="main">
+  <p>商品信息管理</p>
+  <button class="add_goods_button">添加商品</button>
+  <table class="tr_border">
+    <tr>
+      <td class="tr_small">序号</td>
+      <td class="tr_large">商品名称</td>
+      <td class="tr_large">商品数量</td>
+      <td class="tr_medium">单价(元)</td>
+      <td class="tr_small">单位</td>
+      <td class="tr_medium">发布时间</td>
+      <td class="tr_large">操作</td>
+    </tr>
+    <tbody id="table_tbody">
+    <% var num=1; %>
+    <% add_goods.forEach(function(value,index){ %>
+    <tr id="tr<%= value.name %>">
+      <td><%= num %></td>
+      <td><%= value.name %></td>
+      <td>
+        <div class="button_frame">
+          <!--<form method="post">-->
+            <button id="dec_goods_num<%= value.name %>" class="button_border dec_button" onclick="count_goods_number('<%= value.name %>',-1)">-</button>
+            <input name="<%= value.name %>" class="text_box" id='number<%= value.name %>' onblur="extract_number('<%= value.name %>')" type="text" value=<%= value.count %> />
+            <button id="add_goods_num<%= value.name %>" class="button_border add_button" onclick="count_goods_number('<%= value.name %>',1)">+</button>
+          <!--</form>-->
+        </div>
+      </td>
+      <td><%= value.price %></td>
+      <td><%= value.unit %></td>
+      <td><%= value.date %></td>
+      <td><a href="/">详情</a> <a href="#" onclick="delete_row('<%= value.name %>')" >删除</a></td>
+      <div id="show"></div>
+    </tr>
+    <% num++; %>
+    <% }) %>
+    </tbody>
+  </table>
+</div>
+</body>
+</html>

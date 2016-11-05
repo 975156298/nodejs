@@ -1,0 +1,12 @@
+.main{
+    width:200px;
+    height:100px;
+    background-color: #FFFFFF;
+    border:2px black solid;
+    margin: 40%;
+    position: absolute;
+    display: none;
+}
+.k{
+    background-color: #330033;
+}

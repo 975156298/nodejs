@@ -1,0 +1,66 @@
+.main{
+    float:right;
+    width:1140px;
+}
+.add_goods_button{
+    background-color:#0477CA;
+    color:	#FFFFFF;
+    border-radius: 4px;
+    font-size: 15px;
+    width:80px;
+    height:30px;
+    border:0;
+}
+table{
+    width:1140px;
+    border-collapse:collapse;
+    margin-top: 20px;
+}
+td{
+    border-style: solid none ;
+    border-width: 1px;
+    border-color: #cccccc;
+    height:40px;
+}
+.tr_small{
+    width:103px;
+}
+.tr_medium{
+    width:156px;
+}
+.tr_large{
+    width:206px;
+}
+a{
+    color: #0477CA;
+    text-decoration:none;
+}
+.button_frame{
+    border-radius:5px;
+    border-style: solid;
+    border-color: #cccccc;
+    border-width: 1px;
+    width:120px;
+    height: 30px;
+}
+.dec_button{
+    border-radius:5px 0 0 5px;
+    float:left;
+}
+.add_button{
+    border-radius:0 5px 5px 0;
+    float:right;
+}
+.button_border{
+    border-style: solid ;
+    border-color: #cccccc;
+    border-width: 1px;
+    width: 40px;
+    height: 30px;
+    background-color: #FFFFFF ;
+    padding: 0;
+}
+.text_box{
+    width:36px;
+    height:24px;
+}
